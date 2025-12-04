@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎧 RADIO CANNAFEST | En Vivo 24hs</title>
+
+<link rel="icon" type="image/png" href="https://iili.io/fIqhMwQ.webp">
+
+<meta property="og:title" content="RADIO CANNAFEST | En Vivo 24hs">
+<meta property="og:description" content="Música, cultura y vibra 420 en vivo.">
+<meta property="og:image" content="https://iili.io/fIqhMwQ.webp">
+<meta name="theme-color" content="#00ff88">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght:300;400;600&family=Montserrat:wght:600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:url('https://iili.io/fzGgVlp.jpg') center/cover fixed no-repeat;
+  color:#00ff99;
+  text-align:center;
+  padding:20px;
+  overflow-x:hidden;
+}
+
+/* TOP INFO */
+.top-info{
+  max-width:600px;margin:10px auto;
+  padding:15px 20px;background:rgba(0,0,0,.6);
+  border-radius:15px;box-shadow:0 0 20px #00ff88;
+}
+.clima-line{font-size:1.1em;color:#00ff99;text-shadow:0 0 10px #00ff99;}
+.hora-line{font-size:1em;color:#fff;opacity:.85}
+
+/* LOGO NUEVO + NEÓN MULTICOLOR */
+.logo{
+  width:240px;margin:10px auto;display:block;
+  animation:logoNeon 3s infinite ease-in-out;
+}
+@keyframes logoNeon{
+  0%{filter:drop-shadow(0 0 12px #ffff33)}
+  33%{filter:drop-shadow(0 0 14px #ff3333)}
+  66%{filter:drop-shadow(0 0 14px #22ff22)}
+  100%{filter:drop-shadow(0 0 12px #ffff33)}
+}
+
+/* TÍTULO */
+.title{
+  font-size:2.8em;font-weight:700;
+  color:#00ffcc;text-shadow:0 0 20px #00ff88,0 0 40px #00ffaa;
+}
+
+/* EN VIVO */
+.en-vivo{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,0,0,.25);border:1px solid #ff0033;
+  padding:6px 18px;border-radius:25px;
+  color:#ff3355;font-weight:700;margin:10px auto;
+  box-shadow:0 0 12px #ff0033;
+}
+.en-vivo .dot{
+  width:10px;height:10px;border-radius:50%;background:#ff0033;
+  animation:pulse 1s infinite;
+}
+@keyframes pulse{
+ 0%{transform:scale(.9);opacity:.6}
+ 50%{transform:scale(1.4);opacity:1}
+ 100%{transform:scale(.9);opacity:.6}
+}
+
+/* CAJA RADIO */
+.radio-box{
+  background:rgba(0,0,0,.75);padding:40px 30px;
+  border-radius:25px;max-width:650px;margin:30px auto;
+  box-shadow:0 0 30px #00ff99;
+  border:2px solid rgba(0,255,150,0.4);
+}
+
+/* BOTÓN PLAY */
+.play-btn{
+  margin-top:20px;
+  background:linear-gradient(135deg,#00ff88,#00cc66);
+  padding:15px 50px;
+  border:none;border-radius:50px;
+  font-size:1.3em;
+  color:#000;font-weight:600;
+  box-shadow:0 0 15px #00ff88;
+  cursor:pointer;
+}
+.play-btn:hover{transform:scale(1.08)}
+
+/* BOTÓN COMPARTIR */
+.share-btn{
+  margin-top:15px;
+  background:linear-gradient(135deg,#00ccff,#0088ff);
+  padding:12px 40px;
+  border:none;border-radius:50px;
+  font-size:1.1em;
+  color:#fff;font-weight:600;
+  box-shadow:0 0 15px #00aaff;
+  cursor:pointer;
+}
+.share-btn:hover{transform:scale(1.08)}
+
+/* INSTAGRAM */
+.insta-box{
+  margin-top:50px;padding:25px 20px;border-radius:20px;
+  max-width:600px;background:rgba(0,0,0,.8);
+  box-shadow:0 0 20px #ff00aa;
+}
+.insta-title{font-size:1.8em;color:#ff00aa;margin-bottom:10px}
+.insta-link{
+  color:#fff;text-decoration:none;font-size:1.2em;
+  display:inline-flex;align-items:center;gap:10px;
+}
+.insta-logo{
+  width:30px;
+  filter:drop-shadow(0 0 8px #ff00aa);
+}
+
+/* FOOTER DESTACADO */
+.footer-ciborg{
+  margin-top:60px;
+  padding:12px 0;
+  background:rgba(0,0,0,0.65);
+  border-radius:10px;
+  color:#00ffcc;
+  font-weight:600;
+  font-size:1.15em;
+  text-decoration:none;
+  display:block;
+  width:100%;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow:0 0 18px #00ffaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP INFO -->
+<div class="top-info">
+  <div class="clima-line" id="clima">Cargando clima...</div>
+  <div class="hora-line" id="hora"></div>
+  <div class="hora-line" id="fecha"></div>
+</div>
+
+<!-- RADIO -->
+<div class="radio-box">
+
+  <img src="https://iili.io/fIqhMwQ.webp" class="logo">
+  <h1 class="title">RADIO CANNAFEST</h1>
+
+  <div class="en-vivo"><div class="dot"></div> EN VIVO</div>
+
+  <p style="color:#fff;opacity:.9;font-size:1.1em;margin-top:10px;">
+    Música – Cultura – Vibra – 24hs 🎵
+  </p>
+
+  <audio id="radioPlayer" preload="none" src="https://usa15.fastcast4u.com/proxy/ciborg347?mp=/1"></audio>
+
+  <button class="play-btn" id="playBtn" onclick="toggleRadio()">▶ Escuchar radio</button>
+
+  <button class="share-btn" onclick="shareRadio()">📲 Compartir Radio Cannafest</button>
+
+  <div id="playerStatus" style="color:#fff;margin-top:10px;opacity:.9;">
+    ⏸ La radio está detenida.
+  </div>
+
+</div>
+
+<!-- INSTAGRAM -->
+<div class="insta-box">
+  <h2 class="insta-title">Instagram Oficial</h2>
+  <a href="https://www.instagram.com/cannafest2025" target="_blank" class="insta-link">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="insta-logo">
+    @cannafest2025
+  </a>
+</div>
+
+<!-- FOOTER -->
+<a class="footer-ciborg" href="https://ciborg347.onrender.com" target="_blank">
+  Creado y diseñado por Ciborg347™
+</a>
+
+<script>
+/* PLAYER */
+const audio = document.getElementById("radioPlayer");
+const btn = document.getElementById("playBtn");
+const statusEl = document.getElementById("playerStatus");
+let playing = false;
+
+function toggleRadio(){
+  if(!playing){
+    audio.load();
+    audio.play()
+    .then(()=>{
+      playing = true;
+      btn.textContent = "⏸ Detener radio";
+      statusEl.textContent = "🎧 Reproduciendo...";
+    })
+    .catch(()=>{
+      statusEl.textContent = "⚠ Tocá nuevamente para iniciar";
+    });
+  } else {
+    audio.pause();
+    playing = false;
+    btn.textContent = "▶ Escuchar radio";
+    statusEl.textContent = "⏸ La radio está detenida.";
+  }
+}
+
+/* COMPARTIR */
+function shareRadio(){
+  const text = "🎧 Escuchá Radio Cannafest: música, difusión y buena onda!";
+  const url = "https://ciborg347.onrender.com";
+
+  if(navigator.share){
+    navigator.share({title:"Radio Cannafest", text, url});
+  } else {
+    alert("Copiá y compartí:\n" + text + "\n" + url);
+  }
+}
+
+/* HORA + CLIMA */
+function actHora(){
+  let n=new Date();
+  document.getElementById("hora").textContent=n.toLocaleTimeString("es-AR",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
+  document.getElementById("fecha").textContent=n.toLocaleDateString("es-AR",{weekday:"long",day:"numeric",month:"long"});
+}
+setInterval(actHora,1000); actHora();
+
+async function cargarClima(){
+  try{
+    let ip=await fetch("https://ipapi.co/json/").then(r=>r.json());
+    let r=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${ip.latitude}&longitude=${ip.longitude}&current_weather=true`).then(x=>x.json());
+    let t=r.current_weather.temperature;
+    let c=r.current_weather.weathercode;
+
+    let icon="☀️", est="Despejado";
+    if(c>=45&&c<=48){icon="🌫️";est="Niebla"}
+    if(c>=51&&c<=57){icon="🌦️";est="Llovizna"}
+    if(c>=61&&c<=67){icon="🌧️";est="Lluvia"}
+    if(c>=71&&c<=77){icon="❄️";est="Nieve"}
+    if(c>=80&&c<=82){icon="🌧️";est="Chaparrones"}
+    if(c>=95){icon="⛈️";est="Tormenta"}
+
+    document.getElementById("clima").textContent=
+      `${icon} ${ip.city} – ${t}°C – ${est}`;
+  }catch{
+    document.getElementById("clima").textContent="Clima no disponible";
+  }
+}
+cargarClima();
+</script>
+
+</body>
+  </html>
