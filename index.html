@@ -106,21 +106,37 @@ body{
 
 /* INSTAGRAM */
 .insta-box{
-  margin-top:50px;padding:25px 20px;border-radius:20px;
-  max-width:600px;background:rgba(0,0,0,.8);
+  margin-top:50px;
+  padding:25px 20px;
+  border-radius:20px;
+  max-width:600px;
+  background:rgba(0,0,0,.8);
   box-shadow:0 0 20px #ff00aa;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
 }
-.insta-title{font-size:1.8em;color:#ff00aa;margin-bottom:10px}
+.insta-title{
+  font-size:1.8em;
+  color:#ff00aa;
+  margin-bottom:10px;
+  text-align:center;
+}
 .insta-link{
-  color:#fff;text-decoration:none;font-size:1.2em;
-  display:inline-flex;align-items:center;gap:10px;
+  color:#fff;
+  text-decoration:none;
+  font-size:1.2em;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  justify-content:center;
 }
 .insta-logo{
   width:30px;
   filter:drop-shadow(0 0 8px #ff00aa);
 }
 
-/* FOOTER DESTACADO */
+/* FOOTER */
 .footer-ciborg{
   margin-top:60px;
   padding:12px 0;
@@ -137,6 +153,34 @@ body{
   margin-right:auto;
   box-shadow:0 0 18px #00ffaa;
 }
+
+/* ------------------ RESPONSIVE ------------------ */
+
+/* Móviles */
+@media(max-width:480px){
+  .title{font-size:2em}
+  .logo{width:180px}
+  .radio-box{padding:30px 20px}
+  .play-btn{font-size:1.1em;padding:12px 30px}
+  .share-btn{font-size:1em;padding:10px 28px}
+  .insta-title{font-size:1.5em}
+}
+
+/* Tablets */
+@media(max-width:800px){
+  .title{font-size:2.3em}
+  .logo{width:200px}
+  .radio-box{padding:35px 25px}
+}
+
+/* Pantallas grandes */
+@media(min-width:1200px){
+  body{padding:40px}
+  .radio-box{max-width:750px}
+  .title{font-size:3.2em}
+  .logo{width:260px}
+}
+
 </style>
 </head>
 
@@ -217,7 +261,7 @@ function toggleRadio(){
 /* COMPARTIR */
 function shareRadio(){
   const text = "🎧 Escuchá Radio Cannafest: música, difusión y buena onda!";
-  const url = "https://ciborg347.onrender.com";
+  const url = "https://radio-cannafest.onrender.com";
 
   if(navigator.share){
     navigator.share({title:"Radio Cannafest", text, url});
@@ -259,4 +303,4 @@ cargarClima();
 </script>
 
 </body>
-  </html>
+</html>
