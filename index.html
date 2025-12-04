@@ -28,33 +28,34 @@ body{
 /* TOP INFO */
 .top-info{
   max-width:600px;margin:10px auto;
-  padding:15px 20px;background:rgba(0,0,0,.6);
-  border-radius:15px;box-shadow:0 0 20px #00ff88;
+  padding:15px 20px;background:rgba(0,0,0,.55);
+  border-radius:15px;
+  box-shadow:0 0 12px rgba(0,255,150,0.45); /* overlay más suave */
 }
-.clima-line{font-size:1.1em;color:#00ff99;text-shadow:0 0 10px #00ff99;}
+.clima-line{font-size:1.1em;color:#00ff99;text-shadow:0 0 8px #00ff99;}
 .hora-line{font-size:1em;color:#fff;opacity:.85}
 
-/* LOGO NUEVO + NEÓN MULTICOLOR */
+/* LOGO + NEÓN */
 .logo{
   width:260px;
-  margin:15px auto;
+  margin:20px auto 10px;
   display:block;
   animation:logoNeon 3s infinite ease-in-out;
 }
 @keyframes logoNeon{
-  0%{filter:drop-shadow(0 0 12px #ffff33)}
-  33%{filter:drop-shadow(0 0 14px #ff3333)}
-  66%{filter:drop-shadow(0 0 14px #22ff22)}
-  100%{filter:drop-shadow(0 0 12px #ffff33)}
+  0%{filter:drop-shadow(0 0 10px #ffff33)}
+  33%{filter:drop-shadow(0 0 12px #ff3333)}
+  66%{filter:drop-shadow(0 0 12px #22ff22)}
+  100%{filter:drop-shadow(0 0 10px #ffff33)}
 }
 
-/* TÍTULO NUEVO */
+/* TÍTULO AJUSTADO */
 .title{
-  font-size:2em;
+  font-size:2.1em;
   font-weight:600;
-  margin-top:10px;
+  margin-top:8px; /* más cerca del logo */
   color:#00ffcc;
-  text-shadow:0 0 18px #00ff99,0 0 30px #00ffaa;
+  text-shadow:0 0 14px #00ff88,0 0 24px #00ffaa; /* neón más controlado */
 }
 
 /* EN VIVO */
@@ -63,7 +64,7 @@ body{
   background:rgba(255,0,0,.25);border:1px solid #ff0033;
   padding:6px 18px;border-radius:25px;
   color:#ff3355;font-weight:700;margin:10px auto;
-  box-shadow:0 0 12px #ff0033;
+  box-shadow:0 0 10px #ff0033;
 }
 .en-vivo .dot{
   width:10px;height:10px;border-radius:50%;background:#ff0033;
@@ -77,24 +78,24 @@ body{
 
 /* CAJA RADIO */
 .radio-box{
-  background:rgba(0,0,0,.75);
+  background:rgba(0,0,0,.70);
   padding:40px 30px;
   border-radius:25px;
   max-width:650px;
   margin:30px auto;
-  box-shadow:0 0 30px #00ff99;
-  border:2px solid rgba(0,255,150,0.4);
+  box-shadow:0 0 20px rgba(0,255,150,0.35); /* overlay más moderado */
+  border:2px solid rgba(0,255,150,0.25);
 }
 
 /* BOTONES */
 .play-btn{
-  margin-top:20px;
+  margin-top:18px;
   background:linear-gradient(135deg,#00ff88,#00cc66);
   padding:15px 50px;
   border:none;border-radius:50px;
   font-size:1.3em;
   color:#000;font-weight:600;
-  box-shadow:0 0 15px #00ff88;
+  box-shadow:0 0 12px #00ff88;
   cursor:pointer;
 }
 .play-btn:hover{transform:scale(1.08)}
@@ -106,7 +107,7 @@ body{
   border:none;border-radius:50px;
   font-size:1.1em;
   color:#fff;font-weight:600;
-  box-shadow:0 0 15px #00aaff;
+  box-shadow:0 0 12px #00aaff;
   cursor:pointer;
 }
 .share-btn:hover{transform:scale(1.08)}
@@ -118,7 +119,7 @@ body{
   border-radius:20px;
   max-width:600px;
   background:rgba(0,0,0,.8);
-  box-shadow:0 0 20px #ff00aa;
+  box-shadow:0 0 18px #ff00aa;
   margin-left:auto;
   margin-right:auto;
   text-align:center;
@@ -146,7 +147,7 @@ body{
 .footer-ciborg{
   margin-top:60px;
   padding:12px 0;
-  background:rgba(0,0,0,0.65);
+  background:rgba(0,0,0,0.55);
   border-radius:10px;
   color:#00ffcc;
   font-weight:600;
@@ -157,13 +158,13 @@ body{
   max-width:600px;
   margin-left:auto;
   margin-right:auto;
-  box-shadow:0 0 18px #00ffaa;
+  box-shadow:0 0 12px #00ffaa;
 }
 
 /* RESPONSIVE */
 @media(max-width:480px){
   .logo{width:220px}
-  .title{font-size:1.7em}
+  .title{font-size:1.7em;margin-top:10px}
 }
 @media(max-width:800px){
   .logo{width:240px}
@@ -192,7 +193,7 @@ body{
 
   <img src="https://iili.io/fIqhMwQ.webp" class="logo">
 
-  <!-- TÍTULO NUEVO -->
+  <!-- TÍTULO NUEVO AJUSTADO -->
   <h1 class="title">Música que fluye. Vibra que conecta.</h1>
 
   <div class="en-vivo"><div class="dot"></div> EN VIVO</div>
