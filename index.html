@@ -36,7 +36,9 @@ body{
 
 /* LOGO NUEVO + NEÓN MULTICOLOR */
 .logo{
-  width:240px;margin:10px auto;display:block;
+  width:260px;
+  margin:15px auto;
+  display:block;
   animation:logoNeon 3s infinite ease-in-out;
 }
 @keyframes logoNeon{
@@ -46,10 +48,13 @@ body{
   100%{filter:drop-shadow(0 0 12px #ffff33)}
 }
 
-/* TÍTULO */
+/* TÍTULO NUEVO */
 .title{
-  font-size:2.8em;font-weight:700;
-  color:#00ffcc;text-shadow:0 0 20px #00ff88,0 0 40px #00ffaa;
+  font-size:2em;
+  font-weight:600;
+  margin-top:10px;
+  color:#00ffcc;
+  text-shadow:0 0 18px #00ff99,0 0 30px #00ffaa;
 }
 
 /* EN VIVO */
@@ -106,31 +111,6 @@ body{
 }
 .share-btn:hover{transform:scale(1.08)}
 
-/* NUEVA SECCIÓN – ESPARCIMIENTO */
-.esparcimiento{
-  margin-top:50px;
-  padding:30px 25px;
-  max-width:650px;
-  background:rgba(0,0,0,0.78);
-  border-radius:20px;
-  margin-left:auto;
-  margin-right:auto;
-  box-shadow:0 0 25px #00ff99;
-  border:1px solid rgba(0,255,150,0.35);
-}
-.esparcimiento h2{
-  font-size:2em;
-  color:#00ffcc;
-  margin-bottom:15px;
-  text-shadow:0 0 12px #00ffaa;
-}
-.esparcimiento p{
-  font-size:1.25em;
-  color:#fff;
-  opacity:0.92;
-  line-height:1.6em;
-}
-
 /* INSTAGRAM */
 .insta-box{
   margin-top:50px;
@@ -182,25 +162,18 @@ body{
 
 /* RESPONSIVE */
 @media(max-width:480px){
-  .title{font-size:2em}
-  .logo{width:180px}
-  .radio-box{padding:30px 20px}
-  .play-btn{font-size:1.1em;padding:12px 30px}
-  .share-btn{font-size:1em;padding:10px 28px}
-  .insta-title{font-size:1.5em}
+  .logo{width:220px}
+  .title{font-size:1.7em}
 }
 @media(max-width:800px){
-  .title{font-size:2.3em}
-  .logo{width:200px}
-  .radio-box{padding:35px 25px}
+  .logo{width:240px}
 }
 @media(min-width:1200px){
-  body{padding:40px}
-  .radio-box{max-width:750px}
-  .esparcimiento{max-width:750px}
-  .insta-box{max-width:650px}
-  .title{font-size:3.2em}
-  .logo{width:260px}
+  .logo{width:300px}
+  .title{font-size:2.4em}
+}
+@media(min-width:1600px){
+  .logo{width:330px}
 }
 </style>
 </head>
@@ -218,7 +191,9 @@ body{
 <div class="radio-box">
 
   <img src="https://iili.io/fIqhMwQ.webp" class="logo">
-  <h1 class="title"></h1>
+
+  <!-- TÍTULO NUEVO -->
+  <h1 class="title">Música que fluye. Vibra que conecta.</h1>
 
   <div class="en-vivo"><div class="dot"></div> EN VIVO</div>
 
@@ -236,14 +211,6 @@ body{
     ⏸ La radio está detenida.
   </div>
 
-</div>
-
-<!-- NUEVA SECCIÓN -->
-<div class="esparcimiento">
-  <h2>Espacio de Buenas Vibras</h2>
-  <p>
-    La música que necesitás para transformar cualquier momento en algo mejor.
-  </p>
 </div>
 
 <!-- INSTAGRAM -->
@@ -269,13 +236,11 @@ let playing=false;
 function toggleRadio(){
   if(!playing){
     audio.load();
-    audio.play()
-    .then(()=>{
+    audio.play().then(()=>{
       playing=true;
       btn.textContent="⏸ Detener radio";
       statusEl.textContent="🎧 Reproduciendo...";
-    })
-    .catch(()=>{
+    }).catch(()=>{
       statusEl.textContent="⚠ Tocá nuevamente para iniciar";
     });
   } else {
@@ -319,8 +284,7 @@ async function cargarClima(){
     if(c>=80&&c<=82){icon="🌧️";est="Chaparrones"}
     if(c>=95){icon="⛈️";est="Tormenta"}
 
-    document.getElementById("clima").textContent=
-      `${icon} ${ip.city} – ${t}°C – ${est}`;
+    document.getElementById("clima").textContent=`${icon} ${ip.city} – ${t}°C – ${est}`;
   }catch{
     document.getElementById("clima").textContent="Clima no disponible";
   }
