@@ -15,6 +15,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght:300;400;600&family=Montserrat:wght:600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* -------------------------- FUENTE PERSONALIZADA -------------------------- */
+@font-face {
+  font-family: 'BeachHouse3';
+  src: url('Casa de playa.otf') format('opentype');
+}
+
+/* ESTILO GENERAL */
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:'Poppins',sans-serif;
@@ -34,7 +42,7 @@ body{
 .clima-line{font-size:1.1em;color:#00ff99;text-shadow:0 0 10px #00ff99;}
 .hora-line{font-size:1em;color:#fff;opacity:.85}
 
-/* LOGO NUEVO + NEÓN MULTICOLOR */
+/* LOGO */
 .logo{
   width:240px;margin:10px auto;display:block;
   animation:logoNeon 3s infinite ease-in-out;
@@ -49,7 +57,20 @@ body{
 /* TÍTULO */
 .title{
   font-size:2.8em;font-weight:700;
-  color:#00ffcc;text-shadow:0 0 20px #00ff88,0 0 40px #00ffaa;
+  color:#00ffcc;
+  text-shadow:0 0 20px #00ff88,0 0 40px #00ffaa;
+}
+
+/* DESCRIPCIÓN NUEVA CON LA FUENTE PERSONALIZADA */
+.desc-cannafest{
+  font-family: 'BeachHouse3', sans-serif;
+  color:#ffffff;
+  opacity:.95;
+  margin-top:15px;
+  font-size:1.35em;
+  line-height:1.4em;
+  text-shadow:0 0 10px #00ffaa;
+  padding:0 10px;
 }
 
 /* EN VIVO */
@@ -120,7 +141,7 @@ body{
   filter:drop-shadow(0 0 8px #ff00aa);
 }
 
-/* FOOTER DESTACADO */
+/* FOOTER */
 .footer-ciborg{
   margin-top:60px;
   padding:12px 0;
@@ -137,6 +158,7 @@ body{
   margin-right:auto;
   box-shadow:0 0 18px #00ffaa;
 }
+
 </style>
 </head>
 
@@ -157,8 +179,10 @@ body{
 
   <div class="en-vivo"><div class="dot"></div> EN VIVO</div>
 
-  <p style="color:#fff;opacity:.9;font-size:1.1em;margin-top:10px;">
-    Música – Cultura – Vibra – 24hs 🎵
+  <!-- NUEVO TEXTO CON TU FUENTE -->
+  <p class="desc-cannafest">
+    Cultura, música y pura buena vibra.<br>
+    Radio Cannafest: encendé tu día, relajá tu mente y dejate llevar.
   </p>
 
   <audio id="radioPlayer" preload="none" src="https://usa15.fastcast4u.com/proxy/ciborg347?mp=/1"></audio>
@@ -216,7 +240,7 @@ function toggleRadio(){
 
 /* COMPARTIR */
 function shareRadio(){
-  const text = "🎧 Escuchá Radio Cannafest: música, difusión y buena onda!";
+  const text = "🎧 Escuchá Radio Cannafest: música, difusión y buena vibra!";
   const url = "https://radiocannafest.onrender.com/";
 
   if(navigator.share){
@@ -259,4 +283,4 @@ cargarClima();
 </script>
 
 </body>
-  </html>
+</html>
