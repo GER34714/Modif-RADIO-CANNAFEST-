@@ -25,20 +25,22 @@ body{
   overflow-x:hidden;
 }
 
-/* TOP INFO */
+/* TOP INFO (compactado) */
 .top-info{
-  max-width:600px;margin:10px auto;
-  padding:15px 20px;background:rgba(0,0,0,.55);
-  border-radius:15px;
-  box-shadow:0 0 12px rgba(0,255,150,0.45); /* overlay más suave */
+  max-width:500px;
+  margin:5px auto 15px;
+  padding:8px 15px; /* MÁS CHICO */
+  background:rgba(0,0,0,.55);
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,255,150,0.40);
 }
-.clima-line{font-size:1.1em;color:#00ff99;text-shadow:0 0 8px #00ff99;}
-.hora-line{font-size:1em;color:#fff;opacity:.85}
+.clima-line{font-size:0.95em;color:#00ff99;text-shadow:0 0 6px #00ff99;}
+.hora-line{font-size:0.9em;color:#fff;opacity:.85}
 
-/* LOGO + NEÓN */
+/* LOGO */
 .logo{
   width:260px;
-  margin:20px auto 10px;
+  margin:10px auto 0; /* MENOS ESPACIO */
   display:block;
   animation:logoNeon 3s infinite ease-in-out;
 }
@@ -49,13 +51,13 @@ body{
   100%{filter:drop-shadow(0 0 10px #ffff33)}
 }
 
-/* TÍTULO AJUSTADO */
+/* TÍTULO (subido bien pegado) */
 .title{
-  font-size:2.1em;
+  font-size:2.2em;
   font-weight:600;
-  margin-top:8px; /* más cerca del logo */
+  margin-top:3px; /* PEGADO AL LOGO */
   color:#00ffcc;
-  text-shadow:0 0 14px #00ff88,0 0 24px #00ffaa; /* neón más controlado */
+  text-shadow:0 0 12px #00ff88,0 0 22px #00ffaa;
 }
 
 /* EN VIVO */
@@ -79,17 +81,17 @@ body{
 /* CAJA RADIO */
 .radio-box{
   background:rgba(0,0,0,.70);
-  padding:40px 30px;
-  border-radius:25px;
+  padding:35px 28px;
+  border-radius:22px;
   max-width:650px;
-  margin:30px auto;
-  box-shadow:0 0 20px rgba(0,255,150,0.35); /* overlay más moderado */
+  margin:25px auto;
+  box-shadow:0 0 18px rgba(0,255,150,0.30);
   border:2px solid rgba(0,255,150,0.25);
 }
 
 /* BOTONES */
 .play-btn{
-  margin-top:18px;
+  margin-top:20px;
   background:linear-gradient(135deg,#00ff88,#00cc66);
   padding:15px 50px;
   border:none;border-radius:50px;
@@ -114,7 +116,7 @@ body{
 
 /* INSTAGRAM */
 .insta-box{
-  margin-top:50px;
+  margin-top:45px;
   padding:25px 20px;
   border-radius:20px;
   max-width:600px;
@@ -145,7 +147,7 @@ body{
 
 /* FOOTER */
 .footer-ciborg{
-  margin-top:60px;
+  margin-top:55px;
   padding:12px 0;
   background:rgba(0,0,0,0.55);
   border-radius:10px;
@@ -164,14 +166,14 @@ body{
 /* RESPONSIVE */
 @media(max-width:480px){
   .logo{width:220px}
-  .title{font-size:1.7em;margin-top:10px}
+  .title{font-size:1.7em;margin-top:6px}
 }
 @media(max-width:800px){
   .logo{width:240px}
 }
 @media(min-width:1200px){
   .logo{width:300px}
-  .title{font-size:2.4em}
+  .title{font-size:2.4em;margin-top:4px}
 }
 @media(min-width:1600px){
   .logo{width:330px}
@@ -181,7 +183,7 @@ body{
 
 <body>
 
-<!-- TOP INFO -->
+<!-- TOP INFO COMPACTADO -->
 <div class="top-info">
   <div class="clima-line" id="clima">Cargando clima...</div>
   <div class="hora-line" id="hora"></div>
@@ -193,7 +195,7 @@ body{
 
   <img src="https://iili.io/fIqhMwQ.webp" class="logo">
 
-  <!-- TÍTULO NUEVO AJUSTADO -->
+  <!-- TÍTULO PEGADO AL LOGO -->
   <h1 class="title">Música que fluye. Vibra que conecta.</h1>
 
   <div class="en-vivo"><div class="dot"></div> EN VIVO</div>
